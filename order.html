@@ -1,0 +1,176 @@
+<html>
+<head>
+ <meta charset="uTF-8" />
+ <title>Order Form</title>
+<meta name="description" content="...">
+<meta name="keywords" content="...,">
+<meta name="author" content="...">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="main.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header id="header">
+        <!-- Logo and Nav bar go here-->
+            <div>
+              <!-- Since this is float right you gotta place icons top down => right to left -->
+              <!-- <i class="iconrow fas fa-shopping-cart fa-2x"></i> -->
+              <i class="iconrow fas fa-user fa-2x"></i>
+            </div>
+            <div class="clearfix">&nbsp;</div>
+            <a href="home.html"><img src="img/moonbakedtransparentcrop.png" alt="Cookie company logo" style="width:300px"></a>
+
+            <nav>
+            <ul class="nav" id="mynav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="cookies.html">Cookies</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li
+            </ul>
+            </nav>
+
+      <div class="clearfix">&nbsp;</div>
+
+        </header>
+
+        <!-- Begin Order Form-->
+
+            <form name="f">
+            <table id=order_table><thead>
+
+        <th colspan="4" >
+             <B>Order Form</B>
+        </th>
+        <!-- Fields-->
+        <tr>
+            <th>
+                <u>Item</u>
+            </th>
+            <th>
+                <u>Qty</u>
+            </th>
+            <th>
+                <u>Each</u>
+            </th>
+
+            <th>
+                <u>Total</u>
+            </th>
+
+
+        </tr></thead>
+        <!-- Cookie Types-->
+        <tbody>
+        <tr>
+            <td id="0">Chocolate Chip</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,0,2.67)"></td>
+            <td>$ 2.67</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+        <tr>
+            <td id="1">Double Chocolate</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,1,2.75)"></td>
+            <td>$ 2.75</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+        <tr>
+            <td id="2">Oatmeal Raisin</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,2,2.67)">
+            </td><td>$ 2.67</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+        <td id="3">Mint Chocolate Chip</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,3,2.67)"></td>
+            <td>$ 2.67</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+        <tr>
+            <td id="4">Snickerdoodle</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,4,2.67)"></td>
+            <td>$ 2.67</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+        <tr>
+            <td id="5">Frosted Sugarcookie</td>
+            <td align="right"><input name="line" type="text" value="" onkeyup="count(this.form,5,2.67)"></td>
+            <td>$ 2.67</td>
+            <td align="right"><input name="line_sum" type="text" size="10" readonly></td>
+        </tr>
+
+    </tbody>
+        <!-- Sales Tax-->
+        <tfoot>
+        <tr>
+
+            <tr>
+            <td></td>
+            <td colspan="2" align="right">
+                <u>Sales Tax :</u>
+            </td>
+            <td align="right"><input name="sales_tax" type="text" size="10" readonly></td>
+        </tr>
+        <!-- Grand Total-->
+        <tr bgcolor="#B6465F">
+            <td  align="right"><input type="button" value="Reset" onclick="init()"></td>
+            <td colspan="2" align="right">
+                <u>Grand Total :</u>
+            </td>
+            <td align="right"><input name="grand_total" type="text" size="10" readonly></td>
+        </tr>
+        <!-- Verify Button-->
+        <tr>
+            <td colspan="4" align="center">
+                <input type="button" value="Press to Verify Order" onclick="get_data(this.form)"></td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Begin Submit-->
+</form>
+<form class="remove-empty-values" name="g" method="post" enctype="text/plain" action="order_success.html">
+    <table id=submit_table>
+        <tbody>
+            <tr>
+                <td align="center"><textarea name="order" rows="5" cols="35"></textarea>
+                    <P ><input type="button" value="Press to Submit Order" onclick="send_data(this.form)">
+                </td>
+             </tr>
+        </tfoot>
+    </table>
+</form>
+
+
+
+<script src="order.js"></script>
+ <footer id="footer">
+      <div class="section group">
+    <div class="col span_1_of_3">
+  <ul class="sitemap">
+  <li><a href="Order.html">Order</a></li>
+  <li><a href="Cookies.html">Cookies</a></li>
+  <li><a href="About.html">About</a></li>
+</ul>
+    </div>
+    <div class="orginfo col span_1_of_3">
+    <p>Contact</p>
+    <p>410-555-7246 or moonbakedcookies@gmail.com</p>
+  <p>Hours</p>
+  <p>M-F 10am - 6pm</p>
+  <p>Location</p>
+  <p>1383 Baltimore Ave, Baltimore MD</p>
+    </div>
+    <div class="col span_1_of_3">
+    <span style="color:white;">
+    <i class="socmedia fab fa-facebook fa-2x"></i>
+    <i class="socmedia fab fa-instagram fa-2x"></i>
+    <i class="socmedia fab fa-pinterest-square fa-2x"></i>
+    <span>
+    </div>
+</div>
+    </footer>
+
+        </body>
+
+</html>

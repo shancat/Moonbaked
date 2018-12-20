@@ -1,0 +1,390 @@
+/* The Magic of CSS */
+
+/* ---- Global Attributes ---- */
+
+.left{
+  float:left;
+  margin-right:1%;
+}
+
+.right{
+  float:right;
+  margin-left:1%;
+}
+.margin{
+  margin: 20px;
+}
+.centered{
+text-align:center;
+}
+
+.h2{
+
+  text-align: center;
+  background: white;
+  color: black;
+  font-size: 30px;
+}
+
+/* Magic fixer upper */
+.clearfix{
+ clear:both;
+}
+
+
+/* ---- Scroll Bar ---- */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ---- Body ---- */
+
+body{
+  margin:0;
+  padding:0;
+  font-family: 'Asap', sans-serif;
+}
+a{
+  color:white;
+}
+#cookies {
+  padding-left: 12.5%;
+}
+
+/* ---- Header ----*/
+
+#header img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1%;
+}
+
+/*---- Header Icons ----*/
+
+.iconrow {
+  float:right;
+  margin-right: 1em;
+  margin-top: 0.5em;
+}
+
+/* ---- Top Nav ---*/
+
+.nav{
+    list-style:none;
+    margin:0;
+    padding-bottom:2%;
+    text-align:center;
+    font-size:130%;
+    padding-left:0px;
+
+}
+
+.nav li{
+    display:inline;
+}
+
+.nav a{
+    display:inline-block;
+    padding:10px;
+    text-decoration:none;
+    color:black;
+}
+
+.nav .icon {
+  display: none;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* ---- Home page Cookies---*/
+
+/* ---- container holding cookie image and text---- */
+.banner {
+    position: relative;
+}
+
+/* ----Bottom right text on cookies img ----*/
+.text-block {
+    position: absolute;
+    font-size: 1.5em;
+    bottom: 8%;
+    right: 2%;
+    background-color: black;
+    color: white;
+    opacity:0.75;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+/*---Button---*/
+
+.button {
+    margin-top: 2%;
+    margin-bottom: 4%;
+    border: none;
+    background-color:#F7CB8C;
+    padding: 14px 28px;
+    font-size: 38px;
+    color:white;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.button:hover {background: #808080;}
+.order {color: white;}
+
+/*----Cookie image grid----*/
+.column {
+  float: left;
+  width: 32.5%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*----Cookie image grid for Cookies Page----*/
+.cookiescolumn {
+  float: left;
+  width: 28%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.cookiesrow::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ---- Cookies Page Overlay ---- */
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #F7CB8C;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* ---- Contact Form ---- */
+
+div#main{
+width:830px;
+height:650px;
+margin:0 auto;
+font-family:'Asap',sans-serif
+}
+div#form_sample{
+text-align:center;
+border:1px solid #ccc;
+width:300px;
+padding:0 50px 15px;
+margin-top:20px;
+box-shadow:0 0 15px;
+border-radius:6px;
+float:left
+}
+#main h1{
+margin-top:40px
+}
+hr{
+margin-top:-5px
+}
+label{
+float:left;
+font-size:16px
+}
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height:35px;
+margin-bottom:25px;
+padding:10px;
+border:3px solid #F7CB8C
+}
+textarea{
+width:100%;
+border:3px solid #F7CB8C;
+padding:10px;
+margin-bottom:25px;
+margin-top:10px;
+height:100px;
+resize:none
+}
+input[type="submit"]{
+width:100%;
+padding:10px 45px;
+background-color:#F7CB8C;
+border:none;
+color:#fff;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+font-family:'Asap',sans-serif
+}
+/* ---- Order Page ---- */
+
+#order_table{
+  border-collapse: collapse;
+    width: 60%;
+    font-size: 12pt;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#order_table th {
+   text-align: center;
+    background-color: #fcebd4;
+    color: black;
+
+
+}
+
+#order_table input{
+	border: 2px solid #fcebd4;
+}
+
+#order_table tr {
+    background-color: #FFFFFF;
+    color: black;
+}
+
+
+#order_table td {
+    padding: 5px;
+
+}
+
+
+#order_table tr:nth-child(even) td { background: #fcebd4; } 
+#order_table tr:nth-child(odd) td { background: #FEFEFE; } 
+
+#order_table table, th, td{
+  border: 2px solid white;
+}
+
+#submit_table{
+  background-color: #FFFFFF;
+  width:320;
+  margin-left:auto;
+  margin-right:auto;
+
+
+}
+
+/*---Footer---*/
+
+#footer{
+  background-color:#303030;
+  margin-top: 5%;
+  padding-top: 3%;
+}
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+  margin-left: 24%;
+  width: 60%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF THREE  */
+.span_3_of_3 { width: 100%; }
+.span_2_of_3 { width: 66.13%; }
+.span_1_of_3 { width: 32.26%; }
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+  .col {  margin: 1% 0 1% 0%; }
+  .span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+}
+
+/* ---- Footer column custom styles ---- */
+
+.sitemap{
+  list-style:none;
+}
+
+.sitemap li{
+  margin-bottom: 10px;
+}
+
+.orginfo p{
+  color:white;
+}
+
+.socmedia {
+  margin-left: 0.5em;
+}
